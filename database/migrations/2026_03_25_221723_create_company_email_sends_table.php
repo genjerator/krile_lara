@@ -21,8 +21,6 @@ return new class extends Migration
             $table->timestamp('sent_at')->nullable();
             $table->timestamps();
 
-            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
-            $table->foreign('email_template_id')->references('id')->on('email_templates')->onDelete('cascade');
             $table->index(['company_id', 'status']);
             $table->index('status');
             $table->index('sent_at');

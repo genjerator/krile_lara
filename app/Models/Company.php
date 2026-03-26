@@ -12,6 +12,7 @@ class Company extends Model
     use HasUuids;
 
     protected $fillable = [
+        'external_id',
         'name',
         'category',
         'street',
